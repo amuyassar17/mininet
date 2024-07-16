@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<graph id="G" edgedefault="directed">
+<node id="s1"/>
+<node id="s2"/>
+<node id="s3"/>
+<node id="s4"/>
+<node id="s5"/>
+<node id="s6"/>
+<node id="s7"/>
+<node id="s8"/>
+<node id="h1"/>
+<node id="h2"/>
+<node id="h3"/>
+<node id="h4"/>
+<node id="h5"/>
+<node id="h6"/>
+<node id="h7"/>
+<node id="h8"/>
+<node id="h9"/>
+<node id="h10"/>
+<node id="h11"/>
+<node id="h12"/>
+<node id="h13"/>
+<node id="h14"/>
+<node id="h15"/>
+<node id="h16"/>
+<node id="h17"/>
+<node id="h18"/>
+<node id="h19"/>
+<node id="h20"/>
+<node id="h21"/>
+<node id="h22"/>
+<node id="h23"/>
+<node id="h24"/>
+<node id="h25"/>
+<node id="h26"/>
+<node id="h27"/>
+<node id="h28"/>
+<node id="h29"/>
+<node id="h30"/>
+<node id="h31"/>
+<node id="h32"/>
+<node id="h33"/>
+<node id="h34"/>
+<node id="h35"/>
+<node id="h36"/>
+<node id="h37"/>
+<node id="h38"/>
+<node id="h39"/>
+<node id="h40"/>
+<node id="h41"/>
+<node id="h42"/>
+<node id="h43"/>
+<node id="h44"/>
+<node id="h45"/>
+<node id="h46"/>
+<node id="h47"/>
+<node id="h48"/>
+<edge source="h1" target="s3"/>
+<edge source="h2" target="s3"/>
+<edge source="h3" target="s3"/>
+<edge source="h4" target="s3"/>
+<edge source="h5" target="s3"/>
+<edge source="h6" target="s3"/>
+<edge source="h7" target="s3"/>
+<edge source="h8" target="s3"/>
+<edge source="h9" target="s4"/>
+<edge source="h10" target="s4"/>
+<edge source="h11" target="s4"/>
+<edge source="h12" target="s4"/>
+<edge source="h13" target="s4"/>
+<edge source="h14" target="s4"/>
+<edge source="h15" target="s4"/>
+<edge source="h16" target="s4"/>
+<edge source="h17" target="s5"/>
+<edge source="h18" target="s5"/>
+<edge source="h19" target="s5"/>
+<edge source="h20" target="s5"/>
+<edge source="h21" target="s5"/>
+<edge source="h22" target="s5"/>
+<edge source="h23" target="s5"/>
+<edge source="h24" target="s5"/>
+<edge source="h25" target="s6"/>
+<edge source="h26" target="s6"/>
+<edge source="h27" target="s6"/>
+<edge source="h28" target="s6"/>
+<edge source="h29" target="s6"/>
+<edge source="h30" target="s6"/>
+<edge source="h31" target="s6"/>
+<edge source="h32" target="s6"/>
+<edge source="h33" target="s7"/>
+<edge source="h34" target="s7"/>
+<edge source="h35" target="s7"/>
+<edge source="h36" target="s7"/>
+<edge source="h37" target="s7"/>
+<edge source="h38" target="s7"/>
+<edge source="h39" target="s7"/>
+<edge source="h40" target="s7"/>
+<edge source="h41" target="s8"/>
+<edge source="h42" target="s8"/>
+<edge source="h43" target="s8"/>
+<edge source="h44" target="s8"/>
+<edge source="h45" target="s8"/>
+<edge source="h46" target="s8"/>
+<edge source="h47" target="s8"/>
+<edge source="h48" target="s8"/>
+<edge source="s3" target="s1"/>
+<edge source="s3" target="s2"/>
+<edge source="s4" target="s1"/>
+<edge source="s4" target="s2"/>
+<edge source="s5" target="s1"/>
+<edge source="s5" target="s2"/>
+<edge source="s6" target="s1"/>
+<edge source="s6" target="s2"/>
+<edge source="s7" target="s1"/>
+<edge source="s7" target="s2"/>
+<edge source="s8" target="s1"/>
+<edge source="s8" target="s2"/>
+</graph>
+</graphml>

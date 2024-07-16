@@ -1,0 +1,83 @@
+import json
+import socket
+import time
+from mininet.net import Mininet
+from mininet.node import RemoteController
+from mininet.cli import CLI
+from mininet.log import setLogLevel
+
+def send_data_to_agent(data):
+    """Send data to the DRL agent via a socket."""
+    host = 'localhost'
+    port = 5000  # Make sure this port matches the one used by the DRL agent
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.connect((host, port))
+        s.sendall(json.dumps(data).encode('utf-8'))
+
+def collect_data(net):
+    """Collect network performance data."""
+    h1, h2 = net.get('h1', 'h2')
+    # Example command to get data, modify as necessary
+    result = net.iperf((h1, h2), l4Type='UDP')
+    data = {
+        'throughput': result[0],  # Adjust indexing based on actual iperf output
+        'latency': result[1]      # Adjust indexing based on actual ping output
+    }
+    return data
+
+def measurement_loop(net):
+    while True:
+        data = collect_data(net)
+        send_data_to_agent(data)
+        time.sleep(10)  # Adjust frequency of measurements as needed
+
+if __name__ == '__main__':
+    setLogLevel('info')
+    net = Mininet(controller=RemoteController)
+    net.start()
+    measurement_loop(net)
+    net.stop()
+```
+
+### 2. DRL Agent Script (`drl_agent.py`)
+This script receives network data, processes it through the DRL model, and sends configuration changes back to the Ryu controller.
+
+```python
+import json
+import socket
+from stable_baselines3 import PPO
+
+# Initialize or load your model
+model = PPO.load("path_to_your_model")
+
+def receive_data():
+    """Receive data from the measurement script."""
+    host = ''
+    port = 5000
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.bind((host, port))
+    s.listen(1)
+    conn, addr = s.accept()
+    with conn:
+        print('Connected by', addr)
+        while True:
+            data = conn.recv(1024)
+            if not data:
+                break
+            process_data(json.loads(data.decode('utf-8')))
+
+def process_data(data):
+    """Process received data and send decisions to Ryu controller."""
+    # Example processing
+    observation = [data['throughput'], data['latency']]
+    action, _states = model.predict(observation)
+    send_decision_to_ryu(action)
+
+def send_decision_to_ryu(action):
+    """Send the decision to the Ryu controller via a REST API or socket."""
+    # Implementation depends on your Ryu setup
+    pass
+
+if __name__ == '__main__':
+    receive_data()
+
